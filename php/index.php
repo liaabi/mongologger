@@ -54,11 +54,8 @@
           <img class="homelink" src="images/twitter.jpeg" align="left"
                title="Back to home page">
        </a>
-       <h5 id="wip">#search-and-load-tweets-into-mongo</h5>
+       <h5 id="wip">#search-and-load-tweets-from-mongo</h5>
        <form name="loadform" method="get" action="load-tweets.php">
-          <input id="q" class="searchterm" name="q" type="text"
-                 title="Find tweets matching search criteria and load into MongoDB"/>
-          <div id="delete"><span id="x">x</span></div>
           <input id="submit" class="loadtweets" name="submit" type="submit"
                  value="Load tweets"
                  title="Search and load tweets into MongoDB"/>

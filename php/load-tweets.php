@@ -39,8 +39,7 @@ if (true == is_option_set($r_opts) ) {
 
 //  Get tweets collection in MongoDB and last tweet ID.
 $collection = get_collection(TIMESTAMPS);
-$lastobj    = $collection->findOne();
-$lastid     = $lastobj["id"];
+$cursor    = $collection->find();
 
 //  Set the search term.
 //$search_term = "openshift";
@@ -63,23 +62,18 @@ $lastid     = $lastobj["id"];
 //curl_setopt($zeecurl, CURLOPT_RETURNTRANSFER, 1);
 //curl_setopt($zeecurl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
 //TODO here query the database
-$resp = curl_exec($zeecurl);
+//$resp = curl_exec($zeecurl);
 
 //curl_close($zeecurl);
 
-$decoded_resp = json_decode($resp);
+//$decoded_resp = json_decode($resp);
 
 //  Insert each tweet into the MongoDB collection. 
 $beancounter = 0;
-foreach ($decoded_resp as $k => $v) {
-   // echo "<br><p>Processing key " . $k . " ... \n";
-   if ($k == "results") {
-//TODO only last n
-      foreach($v as $idx => $timestamp) {
-         // echo "<br><p>loading item #" . $idx . " : " . print_r($tweet) . "...\n";
-         $entry = convertToArray($timestamp);
-         $entry["time"] =  $time;
-         $collection->insert($entry);
+foreach ($cursor as $v) {{
+         // echo "<br><p>loading item #" . $id . " : " . print_r($time) . "...\n";
+	 $id = $v["id"]
+         $entry = convertToArray($v);
          $beancounter++;
       }
    }
