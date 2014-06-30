@@ -26,7 +26,7 @@
 <?php
 
 include 'common.php';
-/*
+
 //  Check if we need to recreate the collection.
 echo "In load tweets" ;
 $r_opts = array('r', 'recreate');
@@ -39,6 +39,7 @@ if (true == is_option_set($r_opts) ) {
 $collection = get_collection(TIMESTAMPS);
 $cursor    = $collection->find();
 
+/*
 //  Set the search term.
 //$search_term = "openshift";
 //$q_opts = array('q', 'query');

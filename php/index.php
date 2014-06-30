@@ -24,7 +24,6 @@
               $(function() {
                   $(".homelink").tipTip();
                   $(".loadtweets").tipTip();
-                  $(".who").tipTip();
                 }
               );
 
@@ -58,7 +57,7 @@
        <form name="loadform" method="get" action="load-tweets.php">
           <input id="submit" class="loadtweets" name="submit" type="submit"
                  value="Load tweets"
-                 title="Search and load tweets into MongoDB"/>
+                 title="Search and load saved logs"/>
        </form>
     </div>
     <br>
@@ -76,9 +75,9 @@ $resarray   = iterator_to_array($cursor);
     <div id="contentdiv">
       <div class="floaterdiv">
         <table id="twtable" class="sortable" cellspacing="0"
-               summary="Saved tweets">
+               summary="Last logs">
 <?php
-    echo "<caption>MongoDB: A timeline of saved tweets [" . count($resarray) .
+    echo "<caption>MongoDB: A timeline of logs [" . count($resarray) .
          "]<br />an <a href=\"https://openshift.redhat.com/app/\" target=\"_new\">OpenShift</a> demo application with MongoDB -- follow us <a href=\"https://twitter.com/#!/openshift\" target=\"_new\">@openshift</a></caption>\n";
 ?>
            <tr>
