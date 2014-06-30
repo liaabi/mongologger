@@ -39,7 +39,7 @@ if (true == is_option_set($r_opts) ) {
 $collection = get_collection(TIMESTAMPS);
 $cursor    = $collection->find();
 
-/*
+
 //  Set the search term.
 //$search_term = "openshift";
 //$q_opts = array('q', 'query');
@@ -81,7 +81,7 @@ foreach ($cursor as $v) {
 //echo "<p><b>Search URI: </b><font size='-1'>" . $twitter_uri . "</font>\n";
 echo "<br/>\n";
 echo "<p><b>Logged Timestamps Loaded: " . $beancounter . "</b>\n";
-*/
+
 ?>
 
     <br><br/>

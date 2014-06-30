@@ -27,7 +27,6 @@
                 }
               );
 
-              //  Pretentious ... do^od-le
            }
         );
     </script>
@@ -57,7 +56,8 @@ $resarray   = iterator_to_array($cursor);
 
 
 ?>
-echo "Number of logs " . count($resarray);
+echo "Number of logs " ;
+echo "is" . count($resarray) ;
 
     <div id="contentdiv">
       <div class="floaterdiv">
