@@ -40,7 +40,7 @@ if (true == is_option_set($r_opts) ) {
 //  Get tweets collection in MongoDB and last tweet ID.
 $collection = get_collection(TIMESTAMPS);
 $cursor    = $collection->find();
-
+/*
 //  Set the search term.
 //$search_term = "openshift";
 //$q_opts = array('q', 'query');
@@ -84,7 +84,7 @@ echo "<br/>\n";
 echo "<p><b>Logged Timestamps Loaded: " . $beancounter . "</b>\n";
 
 ?>
-
+*/
     <br><br/>
     You will soon be automatically redirected back to the home page ...
   </body>
