@@ -10,7 +10,8 @@
     <script type="text/javascript">
         $(document).ready(
            function() {
-              $(function() { $(".homelink").tipTip(); });
+              $(function() { $(".homelink").tipTip();
+			    $(".loadtweets").tipTip(); });
            }
         );
     </script>
@@ -70,7 +71,7 @@ $cursor    = $collection->find();
 
 //  Insert each tweet into the MongoDB collection. 
 $beancounter = 0;
-foreach ($cursor as $v) {{
+foreach ($cursor as $v) {
          // echo "<br><p>loading item #" . $id . " : " . print_r($time) . "...\n";
 	 $id = $v["id"]
          $entry = convertToArray($v);

@@ -92,7 +92,7 @@ $resarray   = iterator_to_array($cursor);
 foreach ($resarray as $d) {
    echo "<tr id='tweetrow'>\n";
    echo "  <td class='when' colspan='2' sorttable_customkey='" .  
-               strtotime($d['created_at']) . "'>" .  $d['created_at'] .
+               strtotime($d['time']) . "'>" .  $d['time'] .
         "  </td>\n";
    echo "</tr>\n";
 }
