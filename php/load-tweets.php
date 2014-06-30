@@ -10,8 +10,7 @@
     <script type="text/javascript">
         $(document).ready(
            function() {
-              $(function() { $(".homelink").tipTip();
-			    $(".loadtweets").tipTip(); });
+              $(function() { $(".homelink").tipTip(););
            }
         );
     </script>
@@ -74,11 +73,11 @@ $beancounter = 0;
 foreach ($cursor as $v) {
          // echo "<br><p>loading item #" . $id . " : " . print_r($time) . "...\n";
 	 $id = $v["id"]
+	 echo "<br><p>loading item #" . $id . " : " . print_r($time) . "...\n";
          $entry = convertToArray($v);
          $beancounter++;
-      }
-   }
 }
+   
 
 //echo "<p><b>Search URI: </b><font size='-1'>" . $twitter_uri . "</font>\n";
 echo "<br/>\n";
