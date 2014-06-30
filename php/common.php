@@ -1,7 +1,7 @@
 <?php
 
-  define("OPENSHIFT_DB",      "phpmongotweet");
-  define("TWEETS_COLLECTION", "tweets");
+  define("OPENSHIFT_DB",      "testlogger");
+  define("TIMESTAMPS", "TIMESTAMPS");
 
   function is_option_set($opts) {
      foreach ($opts as $k => $v) {
