@@ -55,7 +55,9 @@ $collection = get_collection(TIMESTAMPS);
 $cursor     = $collection->find();
 $resarray   = iterator_to_array($cursor);
 
+
 ?>
+echo "Number of logs " . count($resarray);
 
     <div id="contentdiv">
       <div class="floaterdiv">
