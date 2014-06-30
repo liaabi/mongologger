@@ -28,21 +28,6 @@
               );
 
               //  Pretentious ... do^od-le
-              $("#q").keyup(
-                 function() {
-                    $("#x").fadeIn();
-                    if ($.trim($("#q").val()) == "") {
-                       $("#x").fadeOut();
-                    }
-                 }
-              );
-
-              $("#x").click(
-                 function() {
-                    $("#q").val("");
-                    $(this).hide();
-                 }
-              );
            }
         );
     </script>
@@ -90,8 +75,7 @@ $resarray   = iterator_to_array($cursor);
 <?php
 foreach ($resarray as $d) {
    echo "<tr id='tweetrow'>\n";
-   echo "  <td class='when' colspan='2' sorttable_customkey='" .  
-               strtotime($d['time']) . "'>" .  $d['time'] .
+   echo "  <td class='when' colspan='2'" . "'>" .  $d['time'] .
         "  </td>\n";
    echo "</tr>\n";
 }
