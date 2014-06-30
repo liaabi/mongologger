@@ -10,7 +10,7 @@
     <script type="text/javascript">
         $(document).ready(
            function() {
-              $(function() { $(".homelink").tipTip(););
+              $(function() { $(".homelink").tipTip();
            }
         );
     </script>
