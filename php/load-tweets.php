@@ -22,9 +22,6 @@
             title="Back to home page">
     </a>
     <br><br>
-    <p class="hint">
-       Hint: useable options are [-d|-delta] [-r|-recreate] [-q|-query <term>]
-    <br><br>
 
 <?php
 
@@ -82,9 +79,9 @@ foreach ($cursor as $v) {
 //echo "<p><b>Search URI: </b><font size='-1'>" . $twitter_uri . "</font>\n";
 echo "<br/>\n";
 echo "<p><b>Logged Timestamps Loaded: " . $beancounter . "</b>\n";
-
-?>
 */
+?>
+
     <br><br/>
     You will soon be automatically redirected back to the home page ...
   </body>
