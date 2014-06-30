@@ -1,7 +1,7 @@
 <?php
 
   define("OPENSHIFT_DB", "testlogger");
-  define("TIMESTAMPS", "TIMESTAMPS");
+  define("TIMESTAMPS", "logs");
 
   function is_option_set($opts) {
      foreach ($opts as $k => $v) {
