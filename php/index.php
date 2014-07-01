@@ -47,6 +47,8 @@
     <br>
 
 <?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 include 'common.php';
 
 // Get tweets collection in MongoDB.
@@ -55,12 +57,11 @@ $cursor     = $collection->find();
 $resarray   = iterator_to_array($cursor);
 
 
-?>
-echo "Number of logs " ;
-echo "is" . count($resarray) ;
-
-    <div id="contentdiv">
-      <div class="floaterdiv">
+   <div id="contentdiv">
+   echo "Number of logs " ;
+   echo "is" . count($resarray) . "\n" ;
+ 
+    <div class="floaterdiv">
         <table id="twtable" class="sortable" cellspacing="0"
                summary="Last logs">
 <?php
