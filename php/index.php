@@ -56,11 +56,11 @@ $collection = get_collection(TIMESTAMPS);
 $cursor     = $collection->find();
 $resarray   = iterator_to_array($cursor);
 
+echo "Number of logs " ;
+echo "is" . count($resarray) . "\n" ;
+?>
 
    <div id="contentdiv">
-   echo "Number of logs " ;
-   echo "is" . count($resarray) . "\n" ;
- ?>
     <div class="floaterdiv">
         <table id="twtable" class="sortable" cellspacing="0"
                summary="Last logs">
