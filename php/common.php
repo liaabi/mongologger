@@ -1,6 +1,5 @@
 <?php
 
-  define("OPENSHIFT_DB", $_ENV('OPENSHIFT_APP_NAME'));
   define("TIMESTAMPS", "logs");
 
   function is_option_set($opts) {
@@ -51,7 +50,8 @@
   }
 
   function get_collection($collection) {
-     $db = get_database(OPENSHIFT_DB);
+     dbname = $_ENV['OPENSHIFT_APP_NAME']."";
+     $db = get_database($dbname);
      return $db->$collection;
   }
 
