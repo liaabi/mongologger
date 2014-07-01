@@ -25,6 +25,8 @@
 
 <?php
 
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 include 'common.php';
 
 //  Check if we need to recreate the collection.
