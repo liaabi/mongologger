@@ -56,9 +56,7 @@ $collection = get_collection(TIMESTAMPS);
 echo "Collection selected ";
 echo $collection;
 echo "\n";
-echo "TYPE "
-echo gettype($collection);
-echo "\n";
+echo "Type: ", gettype($collection), "\n";
 $cursor     = $collection->find();
 $resarray   = iterator_to_array($cursor);
 
