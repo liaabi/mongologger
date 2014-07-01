@@ -53,6 +53,8 @@ include 'common.php';
 
 // Get tweets collection in MongoDB.
 $collection = get_collection(TIMESTAMPS);
+echo "Collection selected";
+echo $collection;
 $cursor     = $collection->find();
 $resarray   = iterator_to_array($cursor);
 
