@@ -60,7 +60,7 @@ $resarray   = iterator_to_array($cursor);
    <div id="contentdiv">
    echo "Number of logs " ;
    echo "is" . count($resarray) . "\n" ;
- 
+ ?>
     <div class="floaterdiv">
         <table id="twtable" class="sortable" cellspacing="0"
                summary="Last logs">
