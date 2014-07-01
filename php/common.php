@@ -46,7 +46,7 @@
 
   function get_database($dbname) {
      $conn = get_db_connection($dbname);
-     return $conn;
+     return $conn->$dbname;
   }
 
   function get_collection($collection) {
