@@ -1,6 +1,6 @@
 <?php
 
-  define("OPENSHIFT_DB", "testlogger");
+  define("OPENSHIFT_DB", $_ENV('OPENSHIFT_APP_NAME'));
   define("TIMESTAMPS", "logs");
 
   function is_option_set($opts) {
@@ -34,23 +34,20 @@
   }
 
 
-  function get_db_connection() {
-    # $host   = $_ENV["OPENSHIFT_MONGODB_DB_HOST"];
-    $user   = $_ENV["OPENSHIFT_MONGODB_HA_DB_USERNAME"];
-    $passwd = $_ENV["OPENSHIFT_MONGODB_HA_DB_PASSWORD"];
-    # $port   = $_ENV["OPENSHIFT_MONGODB_DB_PORT"];
+  function get_db_connection($dbname) {
+    $user   = $_ENV['OPENSHIFT_MONGODB_HA_DB_USERNAME'];
+    $passwd = $_ENV['OPENSHIFT_MONGODB_HA_DB_PASSWORD'];
 
      #$uri = "mongodb://" . $user . ":" . $passwd . "@" . $host . ":" . $port;
-     $uri = "mongodb://" . $user . ":" . $passwd . "@" . $_ENV["OPENSHIFT_MONGODB_HA_DB_HOST1"] . ":" . $_ENV["OPENSHIFT_MONGODB_HA_DB_PORT1"] . "," . $_ENV["OPENSHIFT_MONGODB_HA_DB_HOST2"] . ":" . $_ENV["OPENSHIFT_MONGODB_HA_DB_PORT2"]  . "," . $_ENV["OPENSHIFT_MONGODB_HA_DB_HOST3"] . ":" . $_ENV["OPENSHIFT_MONGODB_HA_DB_PORT3"] ;
+     $uri = "mongodb://" . $user . ":" . $passwd . "@" . $_ENV['OPENSHIFT_MONGODB_HA_DB_HOST1'] . ":" . $_ENV['OPENSHIFT_MONGODB_HA_DB_PORT1'] . "," . $_ENV['OPENSHIFT_MONGODB_HA_DB_HOST2'] . ":" . $_ENV['OPENSHIFT_MONGODB_HA_DB_PORT2']  . "," . $_ENV['OPENSHIFT_MONGODB_HA_DB_HOST3'] . ":" . $_ENV['OPENSHIFT_MONGODB_HA_DB_PORT3'] . "/" . $dbname;
 
-     #$uri = $_ENV["OPENSHIFT_MONGODB_HA_URL"];
      $mongo = new Mongo($uri);
      return $mongo;
   }
 
   function get_database($dbname) {
-     $conn = get_db_connection();
-     return $conn->$dbname;
+     $conn = get_db_connection($dbname);
+     return $conn;
   }
 
   function get_collection($collection) {
