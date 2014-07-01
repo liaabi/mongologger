@@ -50,7 +50,7 @@
   }
 
   function get_collection($collection) {
-     dbname = $_ENV['OPENSHIFT_APP_NAME']."";
+     $dbname = $_ENV['OPENSHIFT_APP_NAME']."";
      $db = get_database($dbname);
      return $db->$collection;
   }
