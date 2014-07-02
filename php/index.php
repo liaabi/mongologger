@@ -34,7 +34,7 @@ echo "\n";
 echo "Type: ", gettype($collection), "\n";
 $cursor     = $collection->find();
 $cursor->setReadPreference(MongoClient::RP_PRIMARY);
-$cursor->sort(array('time'=>-1));
+//$cursor->sort(array('time'=>-1));
 $resarray   = iterator_to_array($cursor);
 
 //echo "Number of logs " ;
