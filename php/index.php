@@ -58,6 +58,7 @@ echo $collection;
 echo "\n";
 echo "Type: ", gettype($collection), "\n";
 $cursor     = $collection->find();
+$cursor->setReadPreference(MongoClient::RP_PRIMARY);
 $resarray   = iterator_to_array($cursor);
 
 echo "Number of logs " ;
