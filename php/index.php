@@ -25,7 +25,7 @@
 
           <img class="homelink" src="images/twitter.jpeg" align="left"
 
-               title="Back to home page">
+               title="Back to home page ">
 
        </a>
 
