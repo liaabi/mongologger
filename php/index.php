@@ -7,24 +7,11 @@
     <script src="scripts/sorttable.js"></script>
     <script src="scripts/jquery.tipTip.js"></script>
     <script type="text/javascript">
-        function loadmo(term) {
-           document.forms["loadform"].q.value = term;
-           if ($.trim($("#q").val()) != "") {
-              $("#x").fadeIn();
-           }
-        };
-
         $(document).ready(
            function() {
               $("td, th").hover(
                  function() { $(this).css("background-color", "#FDDC80"); },
                  function() { $(this).css("background-color", ""); }
-              );
-
-              $(function() {
-                  $(".homelink").tipTip();
-                  $(".loadtweets").tipTip();
-                }
               );
 
            }
