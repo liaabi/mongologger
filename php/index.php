@@ -70,19 +70,19 @@ $resarray   = iterator_to_array($cursor);
            </tr>
 
 <?php
+$tmp = 0;
 foreach ($resarray as $d) if ($tmp++ < 50) {
    echo "<tr id='tweetrow'>\n";
-   echo "  <td class='tag'" . "'>" .  $d['tag'] .
-        "  </td>\n";
    echo "  <td class='when' colspan='2'" . "'>" .  $d['time'] .
         "  </td>\n";
-   echo "  <td class='who' colspan='2'" . "'>" .  $d['host'] .
+  echo "  <td class='tag'>" .  $d['tag'] .
+        "  </td>\n"
+   echo "  <td class='who'>" .  $d['host'] .
         "  </td>\n";
    echo "</tr>\n";
 }
 
 ?>
-
         </table>
       <div id="clearalignment">&nbsp;</div>
     </div>
