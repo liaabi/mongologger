@@ -18,7 +18,7 @@
         );
     </script>
   </head>
-<  <body>
+  <body>
   <div id="loaddiv">
 
        <a href="/">
