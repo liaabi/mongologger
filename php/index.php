@@ -19,6 +19,7 @@
     </script>
   </head>
   <body>
+  <div> First div</div>
 
 <?php
 ini_set('display_errors', 'On');
@@ -27,10 +28,10 @@ include 'common.php';
 
 // Get tweets collection in MongoDB.
 $collection = get_collection(TIMESTAMPS);
-echo "Collection selected ";
-echo $collection;
-echo "\n";
-echo "Type: ", gettype($collection), "\n";
+//echo "Collection selected ";
+//echo $collection;
+//echo "\n";
+//echo "Type: ", gettype($collection), "\n";
 $cursor     = $collection->find();
 $cursor->setReadPreference(MongoClient::RP_PRIMARY);
 //$cursor->sort(array('time'=>-1));
