@@ -32,18 +32,6 @@
     </script>
   </head>
   <body>
-    <div id="loaddiv">
-       <a href="/">
-          <img class="homelink" src="images/twitter.jpeg" align="left"
-               title="Back to home page">
-       </a>
-       <h5 id="wip">#search-and-load-tweets-from-mongo</h5>
-       <form name="loadform" method="get" action="load-tweets.php">
-          <input id="submit" class="loadtweets" name="submit" type="submit"
-                 value="Load tweets"
-                 title="Search and load saved logs"/>
-       </form>
-    </div>
     <br>
 
 <?php
@@ -59,10 +47,11 @@ echo "\n";
 echo "Type: ", gettype($collection), "\n";
 $cursor     = $collection->find();
 $cursor->setReadPreference(MongoClient::RP_PRIMARY);
+$cursor->sort(array('time'=>-1));
 $resarray   = iterator_to_array($cursor);
 
-echo "Number of logs " ;
-echo "is" . count($resarray) . "\n" ;
+//echo "Number of logs " ;
+//echo "is" . count($resarray) . "\n" ;
 ?>
 
    <div id="contentdiv">
@@ -81,9 +70,13 @@ echo "is" . count($resarray) . "\n" ;
            </tr>
 
 <?php
-foreach ($resarray as $d) {
+foreach ($resarray as $d) if ($tmp++ < 50) {
    echo "<tr id='tweetrow'>\n";
+   echo "  <td class='tag'" . "'>" .  $d['tag'] .
+        "  </td>\n";
    echo "  <td class='when' colspan='2'" . "'>" .  $d['time'] .
+        "  </td>\n";
+   echo "  <td class='who' colspan='2'" . "'>" .  $d['host'] .
         "  </td>\n";
    echo "</tr>\n";
 }
