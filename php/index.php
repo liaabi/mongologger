@@ -19,7 +19,6 @@
     </script>
   </head>
   <body>
-    <br>
 
 <?php
 ini_set('display_errors', 'On');
@@ -73,5 +72,6 @@ foreach ($resarray as $d) if ($tmp++ < 50) {
         </table>
       <div id="clearalignment">&nbsp;</div>
     </div>
+  </div>
   </body>
 </html>
