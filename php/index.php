@@ -19,29 +19,6 @@
     </script>
   </head>
   <body>
-  <div id="loaddiv">
-
-       <a href="/">
-
-          <img class="homelink" src="images/twitter.jpeg" align="left"
-
-               title="Back to home page ">
-
-       </a>
-
-       <h5 id="wip">#search-and-load-tweets-from-mongo</h5>
-
-       <form name="loadform" method="get" action="load-tweets.php">
-
-          <input id="submit" class="loadtweets" name="submit" type="submit"
-
-                 value="Load tweets"
-
-                 title="Search and load saved logs"/>
-
-       </form>
-
-    </div>
 
 <?php
 ini_set('display_errors', 'On');
