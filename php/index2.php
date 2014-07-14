@@ -23,12 +23,12 @@
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
-//include 'common.php';
+include 'common.php';
 
 // Get tweets collection in MongoDB.
-//$collection = get_collection(TIMESTAMPS);
-//echo "Collection selected ";
-//echo $collection, "\n";
+$collection = get_collection(TIMESTAMPS);
+echo "Collection selected ";
+echo $collection, "\n";
 //$cursor     = $collection->find();
 //$cursor->setReadPreference(MongoClient::RP_PRIMARY);
 //$cursor->sort(array('time'=>-1));
@@ -53,6 +53,20 @@ error_reporting(E_ALL);
              <th scope="col" abbr="@who">Host Ip</th>
            </tr>
 
+<?php
+$tmp = 0;
+foreach ($resarray as $d) if ($tmp++ < 50) {
+   echo "<tr id='tweetrow'>\n";
+   echo "  <td class='when' colspan='2'" . "'>" .  $d['time'] .
+        "  </td>\n";
+  echo "  <td class='tag'>" .  $d['tag'] .
+        "  </td>\n"
+   echo "  <td class='who'>" .  $d['host'] .
+        "  </td>\n";
+   echo "</tr>\n";
+}
+
+?>
         </table>
       <div id="clearalignment">&nbsp;</div>
     </div>
