@@ -60,6 +60,8 @@ foreach ($resarray as $row => $d) {
    echo " <td class='when' colspan='2' sorttable_customkey='" .
                strtotime($d['timestamp']) . "'>" . $d['timestamp'] .
         " </td>\n";
+   echo "  <td class='searchtag'>" . $d['tag'] . "</td>\n";
+   echo "  <td class='who'>" . $d['host'] . "</td>\n"; 
    echo "</tr>\n";	
 }
 ?>
