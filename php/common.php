@@ -40,7 +40,7 @@
      #$uri = "mongodb://" . $user . ":" . $passwd . "@" . $host . ":" . $port;
      $uri = "mongodb://" . $user . ":" . $passwd . "@" . $_ENV['OPENSHIFT_MONGODB_HA_DB_HOST1'] . ":" . $_ENV['OPENSHIFT_MONGODB_HA_DB_PORT1'] . "," . $_ENV['OPENSHIFT_MONGODB_HA_DB_HOST2'] . ":" . $_ENV['OPENSHIFT_MONGODB_HA_DB_PORT2']  . "," . $_ENV['OPENSHIFT_MONGODB_HA_DB_HOST3'] . ":" . $_ENV['OPENSHIFT_MONGODB_HA_DB_PORT3'] . "/" . $dbname;
      
-     echo $uri;
+    #echo $uri;
      $mongo = new MongoClient($uri, array("replicaSet" => "rs0"));
      return $mongo;
   }
