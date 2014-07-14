@@ -26,9 +26,9 @@ error_reporting(E_ALL);
 include 'common.php';
 
 // Get tweets collection in MongoDB.
-//$collection = get_collection(TIMESTAMPS);
-//echo "Collection selected ";
-//echo $collection, "\n";
+$collection = get_collection(TIMESTAMPS);
+echo "Collection selected ";
+echo $collection, "\n";
 //$cursor     = $collection->find();
 //$cursor->setReadPreference(MongoClient::RP_PRIMARY);
 //$cursor->sort(array('time'=>-1));
