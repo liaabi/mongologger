@@ -56,15 +56,19 @@ $resarray   = iterator_to_array($cursor);
 <?php
 
 foreach ($resarray as $val) {
-   echo "<tr id='tweetrow'>\n";
-   echo "  <td class='when' colspan='2'" . "'>" .  $val['timestamp'] .
-        "  </td>\n";
-  echo "  <td class='tag'>" .  $val['tag'] .
-        "  </td>\n"
-   echo "  <td class='who'>" .  $val['host'] .
-        "  </td>\n";
-   echo "</tr>\n";
-}
+   $id = $val["id"]
+   echo "<br><p>loading item #" . $id . "...\n";
+   $entry = convertToArray($val);
+
+   #echo "<tr id='tweetrow'>\n";
+   #echo "  <td class='when' colspan='2'" . "'>" .  $entry['timestamp'] .
+   #     "  </td>\n";
+   #echo "  <td class='tag'>" .  $entry['tag'] .
+   #     "  </td>\n"
+   #echo "  <td class='who'>" .  $entry['host'] .
+   #     "  </td>\n";
+   #echo "</tr>\n";
+#}
 
 ?>
 
