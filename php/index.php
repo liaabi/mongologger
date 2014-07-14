@@ -53,6 +53,7 @@ $resarray   = iterator_to_array($cursor);
              <th scope="col" abbr="@who">Host Ip</th>
            </tr>
 
+<?php
 $tmp = 0;
 foreach ($resarray as $d) if ($tmp++ < 50) {
    echo "<tr id='tweetrow'>\n";
