@@ -23,7 +23,7 @@
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
-//include 'common.php';
+include 'common.php';
 
 // Get tweets collection in MongoDB.
 //$collection = get_collection(TIMESTAMPS);
@@ -42,10 +42,10 @@ error_reporting(E_ALL);
     <div class="floaterdiv">
         <table id="twtable" class="sortable" cellspacing="0"
                summary="Last logs">
-<?php
-    echo "<caption>MongoDB: A timeline of logs [" . count($resarray) .
-         "]<br />an <a href=\"https://openshift.redhat.com/app/\" target=\"_new\">OpenShift</a> demo application with MongoDB -- follow us <a href=\"https://twitter.com/#!/openshift\" target=\"_new\">@openshift</a></caption>\n";
-?>
+//<?php
+//    echo "<caption>MongoDB: A timeline of logs [" . count($resarray) .
+//         "]<br />an <a href=\"https://openshift.redhat.com/app/\" target=\"_new\">OpenShift</a> demo application with MongoDB -- follow us <a href=\"https://twitter.com/#!/openshift\" target=\"_new\">@openshift</a></caption>\n";
+//?>
            <tr>
              <th scope="col" abbr="timeline" class="nobackground">timeline</th>
              <th scope="col" abbr="@when">Timestamp</th>
