@@ -55,7 +55,9 @@ $resarray   = iterator_to_array($cursor);
            </tr>
 
 <?php
-echo "results" . count($resarray). "\n";
+foreach ($resarray as $row => $val) {
+	echo "val" . $val;
+}
 ?>
 
 
