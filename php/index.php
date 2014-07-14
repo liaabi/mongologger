@@ -36,16 +36,15 @@ $resarray   = iterator_to_array($cursor);
 
 //echo "Number of logs " ;
 //echo "is" . count($resarray) . "\n" ;
-?>
+
 
    <div id="contentdiv">
     <div class="floaterdiv">
         <table id="twtable" class="sortable" cellspacing="0"
                summary="Last logs">
-<?php
+
     echo "<caption>MongoDB: A timeline of logs [" . count($resarray) .
          "]<br />an <a href=\"https://openshift.redhat.com/app/\" target=\"_new\">OpenShift</a> demo application with MongoDB -- follow us <a href=\"https://twitter.com/#!/openshift\" target=\"_new\">@openshift</a></caption>\n";
-?>
            <tr>
              <th scope="col" abbr="timeline" class="nobackground">timeline</th>
              <th scope="col" abbr="@when">Timestamp</th>
@@ -53,7 +52,6 @@ $resarray   = iterator_to_array($cursor);
              <th scope="col" abbr="@who">Host Ip</th>
            </tr>
 
-<?php
 
 foreach ($resarray as $val) {
    $id = $val["id"]
