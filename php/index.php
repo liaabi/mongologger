@@ -26,14 +26,14 @@ error_reporting(E_ALL);
 include 'common.php';
 
 // Get tweets collection in MongoDB.
-$collection = get_collection(TIMESTAMPS);
-echo "Collection selected ";
-echo $collection;
-echo "\n";
-$cursor     = $collection->find();
-$cursor->setReadPreference(MongoClient::RP_PRIMARY);
+//$collection = get_collection(TIMESTAMPS);
+//echo "Collection selected ";
+//echo $collection;
+//echo "\n";
+//$cursor     = $collection->find();
+//$cursor->setReadPreference(MongoClient::RP_PRIMARY);
 //$cursor->sort(array('time'=>-1));
-$resarray   = iterator_to_array($cursor);
+//$resarray   = iterator_to_array($cursor);
 
 //echo "Number of logs " ;
 //echo "is" . count($resarray) . "\n" ;
