@@ -55,10 +55,7 @@ $resarray   = iterator_to_array($cursor);
            </tr>
 
 <?php
-foreach ($resarray as $d) {
-	echo $d['timestamp];
-}
-
+echo "results" . count($resarray). "\n";
 ?>
 
 
