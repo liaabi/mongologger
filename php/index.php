@@ -55,10 +55,9 @@ $resarray   = iterator_to_array($cursor);
            </tr>
 
 <?php
-$tmp = 0;
-foreach ($cursor as $d) if ($tmp++ < 50) {
+foreach ($resarray as $d){
    echo "<tr id='tweetrow'>\n";
-   echo "  <td class='when' colspan='2'" . "'>" .  $d['time'] .
+   echo "  <td class='when' colspan='2'" . "'>" .  $d['timestamp'] .
         "  </td>\n";
   echo "  <td class='tag'>" .  $d['tag'] .
         "  </td>\n"
