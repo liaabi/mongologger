@@ -54,14 +54,14 @@ $resarray   = iterator_to_array($cursor);
            </tr>
 
 <?php
-$tmp = 0;
-foreach ($resarray as $d) {
+
+foreach ($resarray as $val) {
    echo "<tr id='tweetrow'>\n";
-   echo "  <td class='when' colspan='2'" . "'>" .  $d['timestamp'] .
+   echo "  <td class='when' colspan='2'" . "'>" .  $val['timestamp'] .
         "  </td>\n";
-  echo "  <td class='tag'>" .  $d['tag'] .
+  echo "  <td class='tag'>" .  $val['tag'] .
         "  </td>\n"
-   echo "  <td class='who'>" .  $d['host'] .
+   echo "  <td class='who'>" .  $val['host'] .
         "  </td>\n";
    echo "</tr>\n";
 }
