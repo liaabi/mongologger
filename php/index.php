@@ -55,10 +55,16 @@ $resarray   = iterator_to_array($cursor);
            </tr>
 
 <?php
-foreach ($resarray as $val) {
-   $id = $val["id"]
-   echo "<br><p>loading item #" . $id . "...\n";
-   $entry = convertToArray($val);
+$tmp = 0;
+foreach ($cursor as $d) if ($tmp++ < 50) {
+   echo "<tr id='tweetrow'>\n";
+   echo "  <td class='when' colspan='2'" . "'>" .  $d['time'] .
+        "  </td>\n";
+  echo "  <td class='tag'>" .  $d['tag'] .
+        "  </td>\n"
+   echo "  <td class='who'>" .  $d['host'] .
+        "  </td>\n";
+   echo "</tr>\n";
 }
 
 ?>
