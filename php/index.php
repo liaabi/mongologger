@@ -29,13 +29,13 @@ include 'common.php';
 $collection = get_collection(TIMESTAMPS);
 echo "Collection selected ";
 echo $collection, "\n";
-//$cursor     = $collection->find();
-//$cursor->setReadPreference(MongoClient::RP_PRIMARY);
-//$cursor->sort(array('time'=>-1));
-//$resarray   = iterator_to_array($cursor);
+$cursor     = $collection->find();
+$cursor->setReadPreference(MongoClient::RP_PRIMARY);
+$cursor->sort(array('time'=>-1));
+$resarray   = iterator_to_array($cursor);
 
-//echo "Number of logs " ;
-//echo "is" . count($resarray) . "\n" ;
+echo "Number of logs " ;
+echo "is" . count($resarray) . "\n" ;
 ?>
 
    <div id="contentdiv">
