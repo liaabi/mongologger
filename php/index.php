@@ -46,7 +46,7 @@ $resarray   = iterator_to_array($cursor);
     echo "<caption>MongoDB: A timeline of logs [" . count($resarray) .
          "]<br />an <a href=\"https://openshift.redhat.com/app/\" target=\"_new\">OpenShift</a> demo application with MongoDB -- follow us <a href=\"https://twitter.com/#!/openshift\" target=\"_new\">@openshift</a></caption>\n";
 
-?> 
+?>
           <tr>
              <th scope="col" abbr="timeline" class="nobackground">timeline</th>
              <th scope="col" abbr="@when">Timestamp</th>
@@ -59,15 +59,6 @@ foreach ($resarray as $val) {
    $id = $val["id"]
    echo "<br><p>loading item #" . $id . "...\n";
    $entry = convertToArray($val);
-
-   #echo "<tr id='tweetrow'>\n";
-   #echo "  <td class='when' colspan='2'" . "'>" .  $entry['timestamp'] .
-   #     "  </td>\n";
-   #echo "  <td class='tag'>" .  $entry['tag'] .
-   #     "  </td>\n"
-   #echo "  <td class='who'>" .  $entry['host'] .
-   #     "  </td>\n";
-   #echo "</tr>\n";
 }
 
 ?>
