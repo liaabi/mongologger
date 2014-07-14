@@ -56,7 +56,7 @@ $resarray   = iterator_to_array($cursor);
 
 <?php
 foreach ($resarray as $row => $val) {
-	echo "val" . $val;
+	echo "val" . $val["timestamp"];
 }
 ?>
 
