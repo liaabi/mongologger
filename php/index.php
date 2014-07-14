@@ -55,15 +55,8 @@ $resarray   = iterator_to_array($cursor);
            </tr>
 
 <?php
-foreach ($resarray as $d){
-   echo "<tr id='tweetrow'>\n";
-   echo "  <td class='when' colspan='2'" . "'>" .  $d['timestamp'] .
-        "  </td>\n";
-  echo "  <td class='tag'>" .  $d['tag'] .
-        "  </td>\n"
-   echo "  <td class='who'>" .  $d['host'] .
-        "  </td>\n";
-   echo "</tr>\n";
+foreach ($resarray as $d) {
+	echo $d['timestamp];
 }
 
 ?>
