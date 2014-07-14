@@ -54,23 +54,23 @@ $resarray   = iterator_to_array($cursor);
              <th scope="col" abbr="@who">Host Ip</th>
            </tr>
 
+<?php
+foreach ($resarray as $val) {
+   $id = $val["id"]
+   echo "<br><p>loading item #" . $id . "...\n";
+   $entry = convertToArray($val);
 
-//foreach ($resarray as $val) {
-//   $id = $val["id"]
-//   echo "<br><p>loading item #" . $id . "...\n";
-//   $entry = convertToArray($val);
+   #echo "<tr id='tweetrow'>\n";
+   #echo "  <td class='when' colspan='2'" . "'>" .  $entry['timestamp'] .
+   #     "  </td>\n";
+   #echo "  <td class='tag'>" .  $entry['tag'] .
+   #     "  </td>\n"
+   #echo "  <td class='who'>" .  $entry['host'] .
+   #     "  </td>\n";
+   #echo "</tr>\n";
+}
 
-   //echo "<tr id='tweetrow'>\n";
-   //echo "  <td class='when' colspan='2'" . "'>" .  $entry['timestamp'] .
-   //     "  </td>\n";
-   //echo "  <td class='tag'>" .  $entry['tag'] .
-   //     "  </td>\n"
-   //echo "  <td class='who'>" .  $entry['host'] .
-   //     "  </td>\n";
-   //echo "</tr>\n";
-//}
-
-//?>
+?>
 
 
         </table>
