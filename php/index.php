@@ -23,7 +23,7 @@
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
-include 'common.php';
+//include 'common.php';
 
 // Get tweets collection in MongoDB.
 //$collection = get_collection(TIMESTAMPS);
