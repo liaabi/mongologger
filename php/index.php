@@ -58,7 +58,7 @@ $resarray   = iterator_to_array($cursor);
 foreach ($resarray as $row => $d) {
    echo "<tr id='tweetrow'>\n";
    echo " <td class='when' colspan='2' sorttable_customkey='" .
-               strtotime($d['timestamp']) . "'>" . $d['timestamp'] .
+               strtotime($d['timestamp']) . "'>" . date('Y-m-d H:i:s', $d['timestamp']->sec) .
         " </td>\n";
    echo "  <td class='searchtag'>" . $d['tag'] . "</td>\n";
    echo "  <td class='who'>" . $d['host'] . "</td>\n"; 
